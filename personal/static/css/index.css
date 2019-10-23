@@ -1,0 +1,245 @@
+/* The sidebar menu */
+{% load static %}
+@font-face {
+    font-family: awesomeFont;
+    src: url('../font/awesome.otf');
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 8rem; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 1rem;
+  }
+  
+  /* The navigation menu links */
+  a{
+    font-family: "Helvetica Neue"; 
+    font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: bold; 
+    line-height: 26px;
+  }
+
+  .sidenav > #col{
+    margin-top: 200%;
+    text-align: center;
+    margin-bottom: 50%;
+  }
+
+  .sidenav > #col > a{
+      font-size: 1rem;
+      padding: 0%;
+  }
+
+  .sidenav > #col > a:link {
+    text-decoration: none;
+  }
+  
+  .sidenav > #col > a:visited {
+    text-decoration: none;
+  }
+  
+  .sidenav > #col > a:hover {
+    text-decoration: none;
+  }
+  
+  .sidenav > #col > a:active {
+    text-decoration: none;
+  }
+
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+.sidenav a:hover {
+color: #f1f1f1;
+}
+
+#bonjour{
+    font-family: 'awesomeFont', serif;
+    color: #DA2A8B;
+    text-align: center;
+    font-size: 10rem;
+    text-decoration: none;
+    margin: -8rem 0 5rem 0;
+    transition: 0.3s;
+}
+
+#bonjour:hover{
+    color: #54C7EB;
+}
+
+#black{
+    background-color: #241919;
+    margin-left: 8rem;
+}
+
+.jumbotron{
+    margin: 7rem 8rem 20rem 0;
+    text-align: left;
+    text-decoration: bold;
+    padding-bottom: 3rem;
+}
+
+#introduction{
+    margin: 0rem 0 0 10rem;
+}
+
+#intro{
+    color: white;
+    font-size: 4rem;
+    text-decoration: bold;
+}
+
+#hov{
+    transition: 0.3s;
+    color: #54C7EB;
+}
+
+#hov:hover{
+    color: #DA2A8B;
+}
+
+#kecil{
+    font-family: 'Cormorant SC', serif;
+    color:white;
+    font-size: 2rem;
+    margin: -10rem 0;
+}
+  
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+ /* Timeline vertical line */
+ul.timeline:before {
+    content: ' ';
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: 100%;
+    z-index: 400;
+    border-radius: 1rem;
+}
+
+li.timeline-item {
+    margin: 20px 0;
+    background-color: white;
+    transition: 0.3s;
+}
+
+li.timeline-item:hover{
+    background-color: #54C7EB;
+}
+
+/* Timeline item arrow */
+.timeline-arrow {
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid #fff;
+    border-bottom: 0.5rem solid transparent;
+    display: block;
+    position: absolute;
+    left: 2rem;
+}
+
+/* Timeline item circle marker */
+li.timeline-item::before {
+    content: ' ';
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: -17px;
+    width: 14px;
+    height: 14px;
+    z-index: 400;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.banner {
+    /* this bit of markup is essential */
+    position: relative;
+    overflow: hidden;
+  
+    /* do this shit by yourself */
+    background: rgba(0, 0, 0, .5) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAF0lEQVQIW2NkYGD4z8DAwMgAI0AMDA4AI3EBBCKrOnQAAAAASUVORK5CYII=');
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 100vh;
+    letter-spacing: 2px;
+  }
+  
+  .banner__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+  }
+
+  .scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
